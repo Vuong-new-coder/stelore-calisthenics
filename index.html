@@ -4,16 +4,65 @@
         <title>stelore calis</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body style="color: white; font-family:Arial; font-size:30px; text-align:center">
-        <div id="content"></div>
+    <body style="background-color:#515151;color:white; font-family:Arial; font-size:30px; text-align:center">
         <nav>
-            <div class="logo">STELORE</div>
+            <div class="logo" style="display: flex; align-items: center;">
+                <img src="logo stelore.png" style="width:100px; height: auto; border-radius: 30px;">
+                <span style="margin-left: 10px;font-size: 50px; width:25px;color:black;">STELORE</span>
+            </div>
             <ul>
                 <li><a href="https://stelore-calisthenics.vercel.app/index.html">HOME</a></li>
             </ul>
-        </nav>
-        <h1 id="title">Hello everyone</h1>
-        <p style="font-size:30px; color: #acfafe">this is stelore calisthenics team website</p>
+        </nav> 
+        <div id="title" class="about">
+            <div class="tab" style="margin-top:200px; color: #76e8ff">Team calisthenics Việt Nam</div>
+            <h1 style="color:white">Làm chủ cơ thể<br>bằng <span style="color:rgb(130, 255, 255)">sức mạnh</span></h1>
+            <p style="color:white">Chúng tôi là một cộng đồng đam mê calisthenics – rèn luyện<br>bằng trọng lượng cơ thể, không máy móc, không giới hạn.</p>
+        </div>
+        <div class="dashboard">
+            <div class="card">
+                <h1 style="color:white">3</h1>
+                <p>Thành viên</p>
+            </div>
+            <div class="card">
+                <h1 style="color:white">1+</h1>
+                <p>Năm hoạt động</p>
+            </div>
+            <div class="card">
+                <h1 style="color:white">2</h1>
+                <p>Tỉnh thành</p>
+            </div>
+        </div>
+        <div>
+            <div style="text-align: left;margin-left: 90px;margin-right:90px">
+                <p style="color:#dfffff; font-weight:550">ĐỘI NHÓM</p>
+                <h1>Gặp gỡ các thành viên</h1>
+                <p style="color:#b3b3b3">Mỗi người một câu chuyện, nhưng cùng chung một đam mê với<br>calisthenics.</p>
+                <div class="dashboard" style="background:linear-gradient(to bottom,#dfffff 0%,#8faaaa 50%,#515151 100% ); border-radius:20px">
+                    <div class="card" style="border: 0.5px solid #ffffff; ">
+                        <div class="avatar">VH</div>
+                        <p>Vương Hoàng</p>
+                        <p class="sub">Trưởng team - Nghệ An</p>
+                    </div>
+                    <div class="card" style="border: 0.5px solid #ffffff; ">
+                        <div class="avatar">QP</div>
+                        <p>Quang Phạm</p>
+                        <p class="sub">Phó team - Hà Tĩnh</p>
+                    </div>
+                    <div class="card" style="border: 0.5px solid #ffffff; ">
+                        <div class="avatar">SH</div>
+                        <p>Sơn Hoàng</p>
+                        <p class="sub">Thành viên - Nghệ An</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-color:#dfffff;text-align:center;color:black; height:500px">
+            <h1><br>Sẵn sàng gia nhập ?</h1>
+            <p>không cần kinh nghiệm. Chỉ cần ý chí và tinh thần đồng đội.</p>
+            <div><br></div>
+            <button style="font-size:90%">Gia nhập team</button>
+        </div>
         <script>
             document.getElementById("title").style.opacity = 0;
             setTimeout(() => {
