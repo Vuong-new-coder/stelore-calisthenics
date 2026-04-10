@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>stelore calis</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="background-color:#515151;color:white; font-family:Arial; font-size:30px; text-align:center">
+        <nav>
+            <div class="logo" style="display: flex; align-items: center;">
+                <img src="logo stelore.png" style="width:100px; height: auto; border-radius: 30px;">
+                <span style="margin-left: 10px;font-size: 50px; width:25px;color:black;">STELORE</span>
+            </div>
+            <ul>
+                <li><a href="https://stelore-calisthenics.vercel.app/index.html">HOME</a></li>
+            </ul>
+        </nav> 
+        <div id="title" class="about">
+            <h1 style="font-size:60px"> Quang sờ kíp léc đây<br><span style="color:red">Chân như que tăm</span></h1>
+        </div>
+        <script>
+            document.getElementById("title").style.opacity = 0;
+            setTimeout(() => {
+                document.getElementById("title").style.transition = "1s";
+                document.getElementById("title").style.opacity = 1;
+            }, 500);
+            document.addEventListener("DOMContentLoaded", () => {
+                document.body.classList.add("loaded");
+            });
+            document.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", function(e) {
+                    if (this.href && this.target !== "_blank") {
+                        e.preventDefault();
+                        document.body.classList.remove("loaded");
+                        setTimeout(() => {
+                            window.location = this.href;
+                        }, 300);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

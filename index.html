@@ -72,9 +72,13 @@
             <br>
             <div style="text-align:left">
                 <button style="font-size:90%;"><a href="https://www.facebook.com/profile.php?id=61574291131796" style="color:grey; ">Facebook</a></button>
+                <button onclick="ch()">HÍT ĐẤT BAY</button>
             </div>
         </div>
         <script>
+            function ch() {
+                window.location.href = "qng.html";
+            }
             document.getElementById("title").style.opacity = 0;
             setTimeout(() => {
                 document.getElementById("title").style.transition = "1s";
