@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>stelore calis</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="background-color:white;color:white; font-family:Arial; font-size:30px; text-align:center">
+        <nav>
+            <div class="logo" style="display: flex; align-items: center;">
+                <img src="logo stelore.png" style="width:100px; height: auto; border-radius: 30px;">
+                <span style="margin-left: 10px;font-size: 50px; width:25px;color:black;">STELORE</span>
+            </div>
+            <ul>
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="pratice.html">TẬP LUYỆN</a></li>
+            </ul>
+        </nav> 
+        <div id="title" class="task" style="align-items:start; text-align: left;font-size:80px; font-weight: 900">
+            <div class="tab" style="width:max-content"></div>
+            <div style="margin-left:90px">SỨC</div>
+            <div class="hollow-text" style="margin-left:90px">MẠNH</div>
+            <div style="margin-left:90px">THỰC SỰ</div>
+            <p style="color:#acacac; font-size:40px; font-weight:300px; margin-left:90px">Từ cơ bản đến nâng cao - hành trình thay đổi bắt đầu từ đây.</p>
+        </div>
+        <div style="background: linear-gradient(to bottom,#515151 0%,#8faaaa 50%,#dfffff 100% ); height:auto; text-align:left; ">
+            <div class="tab"></div>
+            <p style="color:#dfffff; font-weight:500">chương trình</p>
+            <h1>Chọn cấp độ của bạn</h1>
+            <div class="card" style="transform: translateY(-8px);">
+                <div class="easy" style="width:100px; border-radius:10px">Cơ bản</div>
+                <p>Xây dựng sức mạnh cơ bản, làm quen với cơ thể, hình thành thói quen vận động lành mạnh.</p>
+                <ul style="text-align:left; color:#2d5a4c">
+                    <li>Push up</li>
+                    <li>Plank</li>
+                    <li>Inverted row</li>
+                    <li>Leg raise</li>
+                    <li>Australian pull up</li>
+                </ul>
+            </div>
+            <div class="card" style="transform: translateY(-8px);">
+                <div class="medium" style="width:150px; border-radius:10px">Trung cấp</div>
+                <p>Thách thức giới hạn, phát triển sức mạnh chức năng và kiểm soát cơ thể toàn diện.</p>
+                <ul style="text-align:left; color:#5a5a2d">
+                    <li>Diamond push up</li>
+                    <li>Pull up / Chin up</li>
+                    <li>Dips</li>
+                    <li>L-sit</li>
+                    <li>Tuck / advance planche</li>
+                </ul>
+            </div>
+            <div class="card" style="transform: translateY(-8px);">
+                <div class="hard" style="width:150px; border-radius:10px">Nâng cao</div>
+                <p>Ký năng đỉnh cao, kiểm soát hoàn toàn trọng lực và thể hiện sức mạnh thuần túy.</p>
+                    <ul style="text-align:left; color:#5a2d2d">
+                        <li>Handstand push up</li>
+                        <li>Muscle up</li>
+                        <li>Human flag</li>
+                        <li>Front-level</li>
+                        <li>Full planche</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="background-color:#dfffff">
+            <div class="search-container">
+                <h1 style="color:black">TÌM KIẾM BÀI TẬP</h1>
+                <div class="search-box" style="align-items:center;">
+                    <input type="text" id="searchInput" placeholder="Tìm bài tập (vd: push-up, vai)...">
+                </div>
+                <br>
+                <div class="stats" style="color:black; font-size:30px">
+                    Hiển thị <span id="count">0</span> bài tập
+                </div>
+                <div id="exerciseGrid" class="grid"></div>
+            </div>
+        </div>
+        <hr style="border: none; height: 2px; background-color: black; margin: 0px; opacity: 1;">
+        <div style="background: linear-gradient(to bottom,#dfffff 0%,#8faaaa 50%,#515151 100% ); height:1200px; text-align:left;">
+            <div class="tab"></div>
+            <h1 class="hollow-text" style="-webkit-text-stroke-color: grey; color:white; -webkit-text-stroke-width: 2px;">Tập đúng để tiến xa</h1>
+            <h2>- Tăng tiến từng bước</h2>
+            <p>Không vội vã, sự kiên nhẫn là vũ khí mạnh nhất của bạn trong calisthenics.</p>
+            <hr class="neon-line">
+            <h2>- Nghỉ ngơi cũng là tập luyện</h2>
+            <p>Cơ băp phát triển khi nghỉ, không phải khi tập. Ngủ đủ và đừng bỏ qua các ngày nghỉ trong lịch tập.</p>
+            <hr class="neon-line">
+            <h2>- Kết nối cơ và não</h2>
+            <p>Tập trung vào cơ đang làm việc, không chỉ đếm số reps. Cảm nhận từng chuyển động cơ giúp bạn kích hoạt đúng nhóm cơ và tập luyện hiệu quả hơn.</p>
+            <hr class="neon-line">
+            <h2>- Chế độ dinh dưỡng hợp lý</h2>
+            <p>Ăn đủ protein (2g/kg cân nặng) để phục hồi cơ bắp. Không cần chế độ phức tạp - ăn thật, ngủ đủ, tập đều là cách để chiến thắng.</p>
+            <hr class="neon-line">
+        </div>
+        <script>
+             // 1. Dữ liệu bài tập
+            const exercises = [
+                { name: "Push-up", level: "CƠ BẢN", part: "NGỰC", muscles: ["ngực", "vai", "tay sau"] },
+                { name: "Pike Push-up", level: "CƠ BẢN", part: "VAI", muscles: ["vai", "tay sau", "ngực"] },
+                { name: "Inverted Row", level: "CƠ BẢN", part: "LƯNG", muscles: ["lưng", "tay trước", "vai sau"] },
+                { name: "Lateral Raise", level: "CƠ BẢN", part: "VAI", muscles: ["vai", "tay sau", "ngực"] },
+                { name: "Plank", level: "CƠ BẢN", part: "CORE", muscles: ["cỏe", "vai", "lưng dưới"] },
+                { name: "Pike Push-up", level: "CƠ BẢN", part: "VAI", muscles: ["vai", "tay sau", "ngực"] },
+                { name: "Diamond Push up", level: "TRUNG CẤP", part: "NGỰC", muscles: ["ngực", "tay sau", "vai"] },
+                { name: "Pull up", level: "TRUNG CẤP", part: "LƯNG", muscles: ["lưng", "tay trước", "vai"] },
+                { name: "Chin up", level: "TRUNG CẤP", part: "LƯNG", muscles: ["ngực", "tay sau", "core"] },
+                { name: "Hollow Body", level: "TRUNG CẤP", part: "CORE", muscles: ["core", "vai", "lưng dưới"] },
+                { name: "L-sit", level: "TRUNG CẤP", part: "CORE", muscles: ["core", "tay sau", ""] },
+                { name: "Dips", level: "TRUNG CẤP", part: "TAY", muscles: ["tay sau", "ngực dưới", "vai"] },
+                { name: "Curl xà", level: "TRUNG CẤP", part: "TAY", muscles: ["tay trước", "cẳng tay", ""] },
+                { name: "Archer Push up", level: "NÂNG CAO", part: "NGỰC", muscles: ["ngực", "vai", ""] },
+                { name: "Muscle up", level: "NÂNG CAO", part: "LƯNG", muscles: ["lưng", "vai", "core"] },
+                { name: "Dragon flag", level: "NÂNG CAO", part: "CORE", muscles: ["core", "lưng", "vai"] },
+                { name: "Human flag", level: "NÂNG CAO", part: "LƯNG", muscles: ["lưng", "vai", "core"] },
+                { name: "Handstand Push up", level: "NÂNG CAO", part: "VAI", muscles: ["vai", "tay sau", "core"] }
+            ];
+            const grid = document.getElementById('exerciseGrid');
+            const input = document.getElementById('searchInput');
+            const countSpan = document.getElementById('count');
+
+            // 2. Hàm hiển thị bài tập
+            function render(data) {
+                countSpan.innerText = data.length;
+                if (data.length === 0) {
+                    grid.innerHTML = '<p style="grid-column: 1/-1">Không tìm thấy bài tập phù hợp.</p>';
+                    return;
+                }
+                grid.innerHTML = data.map(ex => `
+                    <div class="card2">
+                        <div class="part-tag">${ex.part}</div>
+                        <h3>${ex.name}</h3>
+                        <span class="level ${ex.level === 'NÂNG CAO' ? 'hard' : ex.level === 'TRUNG CẤP' ? 'medium' : 'easy'}">
+                            ${ex.level}
+                        </span>
+                        <div class="muscles">
+                            ${ex.muscles.map(m => `<span>${m}</span>`).join('')}
+                        </div>
+                    </div>
+                `).join('');
+            }
+            // 3. Logic tìm kiếm
+            input.addEventListener('input', (e) => {
+                const keyword = e.target.value.toLowerCase();
+                const filtered = exercises.filter(ex => 
+                    ex.name.toLowerCase().includes(keyword) || 
+                    ex.part.toLowerCase().includes(keyword) ||
+                    ex.muscles.some(m => m.includes(keyword))
+                );
+                render(filtered);
+            });
+            document.getElementById("title").style.opacity = 0;
+            setTimeout(() => {
+                document.getElementById("title").style.transition = "1s";
+                document.getElementById("title").style.opacity = 1;
+            }, 500);
+            document.addEventListener("DOMContentLoaded", () => {
+                document.body.classList.add("loaded");
+            });
+            document.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", function(e) {
+                    if (this.href && this.target !== "_blank") {
+                        e.preventDefault();
+                        document.body.classList.remove("loaded");
+                        setTimeout(() => {
+                            window.location = this.href;
+                        }, 300);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: white;
+  background-color: grey;
   color: black;
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -10,6 +10,11 @@ body {
 .about {
   background: linear-gradient(to bottom,#dfffff 0%,#8faaaa 50%,#515151 100% );
   height:800px;
+}
+
+.task {
+  background-color: #515151;
+  height: 800px;
 }
 
 body.loaded {
@@ -42,6 +47,15 @@ nav a:hover {
   color: #7fffff;
   transform: scale(1.1);
   font-weight: 600;
+}
+
+.logo {
+  margin-left: 10px;
+  color:black;
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
 }
 
 .container {
@@ -130,3 +144,126 @@ nav button:hover {
   color:white;
   font-size:30px;
 }
+
+/*làm rỗng bên trong chữ*/
+.hollow-text {
+    color: transparent;
+    
+    -webkit-text-stroke-width: 1px; /* Độ dày của viền */
+    -webkit-text-stroke-color: white; /* Màu của viền */
+}
+
+:root {
+    --bg: #121212;
+    --card: #1c1c1c;
+    --border: #333;
+    --accent: #2d5a4c;
+    --text: #ffffff;
+    --text-dim: #d1d1d1;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 600px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 22px 40px;
+    background: #252525;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: var(--accent);
+}
+
+/* Bố cục Grid */
+.search-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.stats {
+    margin-bottom: 20px;
+    color: var(--text-dim);
+    font-size: 14px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Card bài tập */
+.card2 {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 25px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.card2:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+}
+
+.part-tag {
+    font-size: 12px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 22px;
+    color: #ffffff
+}
+
+.level {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Màu cho các cấp độ */
+.easy { background: #2d5a4c; color: #a5ffd6; }
+.medium { background: #5a5a2d; color: #ffffa5; }
+.hard { background: #5a2d2d; color: #ffa5a5; }
+
+.muscles {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    color: #ffffff;
+}
+
+.muscles span {
+    font-size: 12px;
+    background: #252525;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: var(--text-dim);
+    border: 1px solid #333;
+}
+
+.neon-line {
+    border: none;
+    height: 4px;
+    background-color: #d4ff00;
+    margin: 40px 0;
+    opacity: 1;
+}
+
